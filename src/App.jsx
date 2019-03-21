@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TargetText />
+        <TargetText saveText={targetText => this.setState({targetText})}/>
         <label>
           Type here:
           <textarea
