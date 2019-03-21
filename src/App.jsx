@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TargetText from './TargetText.jsx'
 import './App.css';
 
 class App extends Component {
@@ -14,14 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <label>
-          Target text:
-          <textarea
-            value={this.state.targetText}
-            onChange={e => this.setState({ targetText: e.target.value })}
-          />
-        </label>
-
+        <TargetText />
         <label>
           Type here:
           <textarea
