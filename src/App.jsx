@@ -14,15 +14,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <textarea
-          value={this.state.targetText}
-          onChange={e => this.setState({ targetText: e.target.value })}
-        />
+        <label>
+          Target text:
+          <textarea
+            value={this.state.targetText}
+            onChange={e => this.setState({ targetText: e.target.value })}
+          />
+        </label>
 
-        <textarea
-          value={this.state.currentText}
-          onChange={e => this.setState({ currentText: e.target.value })}
-        />
+        <label>
+          Type here:
+          <textarea
+            value={this.state.currentText}
+            onChange={e => this.setState({ currentText: e.target.value })}
+          />
+        </label>
       </div>
     );
   }
