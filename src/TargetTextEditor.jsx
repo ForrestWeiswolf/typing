@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import TargetTextDisplay from './TargetTextDisplay'
 
 const TargetText = props => {
   let [text, setText] = useState('');
@@ -14,7 +15,7 @@ const TargetText = props => {
           onChange={e => setText(e.target.value)}
         />
       </label>
-    ) : <p>{text}</p>}
+    ) : <TargetTextDisplay display={text} />}
 
     <button disabled={isEditing} onClick={() => setIsEditing(true)}>Edit</button>
     <button disabled={!isEditing} onClick={() => {
