@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TargetText from './TargetText.jsx'
+import TargetTextEditor from './TargetTextEditor.jsx'
 import './App.css';
 
 class App extends Component {
@@ -15,7 +15,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TargetText saveText={targetText => this.setState({targetText})}/>
+        <TargetTextEditor
+          saveText={targetText => this.setState({ targetText })}
+          currentText={this.state.currentText}
+        />
         <label>
           Type here:
           <textarea
