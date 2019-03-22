@@ -15,7 +15,7 @@ const TargetText = props => {
           onChange={e => setText(e.target.value)}
         />
       </label>
-    ) : <TargetTextDisplay display={text} />}
+    ) : <TargetTextDisplay display={text} compareTo={props.currentText}/>}
 
     <button disabled={isEditing} onClick={() => setIsEditing(true)}>Edit</button>
     <button disabled={!isEditing} onClick={() => {
