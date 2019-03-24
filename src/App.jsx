@@ -23,6 +23,7 @@ class App extends Component {
           <label>
             <p>Type here:</p>
           <textarea
+              placeholder={this.state.targetText}
               value={this.state.currentText}
               onChange={e => this.setState({ currentText: e.target.value })}
             />
