@@ -19,13 +19,15 @@ class App extends Component {
           saveText={targetText => this.setState({ targetText })}
           currentText={this.state.currentText}
         />
-        <label>
-          Type here:
+        <div className="textarea-container">
+          <label>
+            <p>Type here:</p>
           <textarea
-            value={this.state.currentText}
-            onChange={e => this.setState({ currentText: e.target.value })}
-          />
-        </label>
+              value={this.state.currentText}
+              onChange={e => this.setState({ currentText: e.target.value })}
+            />
+          </label>
+        </div>
       </div>
     );
   }

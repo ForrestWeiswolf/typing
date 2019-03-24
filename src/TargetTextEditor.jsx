@@ -6,7 +6,7 @@ const TargetText = props => {
   let [text, setText] = useState('');
   let [isEditing, setIsEditing] = useState(true);
 
-  return <div>
+  return <div className="textarea-container">
     {isEditing ? (
       <label>
         <p>Target text:</p>
@@ -15,7 +15,7 @@ const TargetText = props => {
           onChange={e => setText(e.target.value)}
         />
       </label>
-    ) : <TargetTextDisplay display={text} compareTo={props.currentText}/>}
+    ) : <TargetTextDisplay display={text} compareTo={props.currentText} />}
 
     <button disabled={isEditing} onClick={() => setIsEditing(true)}>Edit</button>
     <button disabled={!isEditing} onClick={() => {

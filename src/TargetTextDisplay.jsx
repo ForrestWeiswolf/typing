@@ -23,7 +23,7 @@ const TargetTextDisplay = props => {
   console.log(sections)
 
   return (
-    <div>
+    <code>
       <p>{props.display}</p>
       <p>
         {sections.map((section, idx) =>
@@ -31,7 +31,7 @@ const TargetTextDisplay = props => {
         )}
       </p>
 
-    </div>
+    </code>
 
   )
 }
